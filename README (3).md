@@ -15,7 +15,7 @@ This project groups 1,000 retail customers into distinct, actionable segments us
 
 ## 1. Preparing the Data
 
-`CustomerID` was dropped (a label, not a real characteristic), and the two text columns (`Education`, `Marital_Status`) were one-hot encoded, expanding the dataset to 33 numeric columns. All 33 were then scaled with `StandardScaler`, since K-Means and PCA both rely on distance calculations that break down when features sit on wildly different scales (e.g. `Income` in the tens of thousands vs. a 0-2 `Kidhome` count).
+CustomerID was dropped (a label, not a real characteristic), and the two text columns (Education, Marital_Status) were one-hot encoded, expanding the dataset to 33 numeric columns. All 33 were then scaled with StandardScaler, since K-Means and PCA both rely on distance calculations that break down when features sit on wildly different scales (e.g. Income in the tens of thousands vs. a 0-2 Kidhome count).
 
 ## 2. Dimensionality Reduction (PCA)
 
@@ -63,10 +63,13 @@ Python, Pandas, Scikit-learn (StandardScaler, PCA, KMeans, silhouette_score), Ma
 
 ## Files
 
-- `project3_customer_segmentation.py` — full pipeline: load, encode, scale, PCA, K selection, clustering, personas
-- `customer_segmentation_data.csv` — synthetic input dataset
-- `customer_segmentation_with_clusters.csv` — final output with cluster labels
+- project3_customer_segmentation.py — full pipeline: load, encode, scale, PCA, K selection, clustering, personas
+- customer_segmentation_data.csv — synthetic input dataset
+- customer_segmentation_with_clusters.csv — final output with cluster labels
 
 ## Key Takeaway
 
 The Silhouette Score gave a clear, unambiguous mathematical answer, and it wasn't the one that was actually useful. Recognizing when to prioritize business actionability over the single "best" statistical metric was the real decision point of this project, not the clustering code itself.
+
+
+LINK TO THE LINKEDIN POST I MADE ON TASK 3 - https://lnkd.in/p/e5zFhkZA
